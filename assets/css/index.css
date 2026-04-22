@@ -277,6 +277,100 @@ img {
   margin-top: 20px;
 }
 
+.page-hero-panel {
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0.94), rgba(255, 255, 255, 0.78));
+  border: 1px solid rgba(113, 87, 55, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 32px 36px 22px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(17, 94, 89, 0.08), transparent 72%);
+  pointer-events: none;
+}
+
+.page-hero-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.9fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.page-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero--compact h1 {
+  max-width: 10ch;
+  font-size: clamp(3.3rem, 7vw, 5.6rem);
+  margin-bottom: 14px;
+}
+
+.page-hero-lead {
+  font-size: 1.14rem;
+  max-width: 34ch;
+  color: var(--text);
+}
+
+.page-hero-notes {
+  display: grid;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-note {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(113, 87, 55, 0.12);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-hero-note strong {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.page-hero-note span {
+  display: block;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.hero-summary-compact {
+  margin-top: 12px;
+}
+
+.hero-summary-compact p {
+  max-width: 72ch;
+  margin-bottom: 0;
+}
+
+.page-hero-panel .hero-chip-row {
+  margin-top: 16px;
+}
+
+.page-hero-panel .hero-actions {
+  margin-top: 18px;
+}
+
 .content {
   padding: 8px 0 54px;
 }
@@ -594,6 +688,15 @@ img {
     position: static;
     top: auto;
   }
+
+  .page-hero-head {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero--compact h1,
+  .page-hero-lead {
+    max-width: none;
+  }
 }
 
 @media (max-width: 760px) {
@@ -611,7 +714,8 @@ img {
   }
 
   .hero-grid > div:first-child,
-  .article {
+  .article,
+  .page-hero-panel {
     padding: 24px;
   }
 
