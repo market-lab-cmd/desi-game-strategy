@@ -12,7 +12,7 @@ The aim is not just to cover keywords related to desi game strategy. It is to ma
 
 ## 🖼️ Site Overview
 
-![Desi Game Strategy overview illustration with a calm educational workspace and visual study elements](./assets/images/overview.png)
+![Desi Game Strategy overview illustration with a calm educational workspace and visual study elements](./assets/images/overview.webp)
 
 ---
 

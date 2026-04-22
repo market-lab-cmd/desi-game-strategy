@@ -113,6 +113,10 @@ img {
   align-items: stretch;
 }
 
+.hero-grid-single {
+  grid-template-columns: 1fr;
+}
+
 .hero-grid > div:first-child {
   background: linear-gradient(180deg, rgba(255, 250, 243, 0.92), rgba(255, 255, 255, 0.72));
   border: 1px solid rgba(113, 87, 55, 0.12);
